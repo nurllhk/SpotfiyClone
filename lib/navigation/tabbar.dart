@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:spotfiy/classes/default_key.dart';
 import 'package:spotfiy/view/home.dart';
 import 'package:spotfiy/view/lib.dart';
 import 'package:spotfiy/view/premium.dart';
@@ -27,25 +28,25 @@ class _TabbarState extends State<Tabbar> {
           },
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+                icon: Icon(Icons.home_outlined), label: DefaultKey.home,),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: DefaultKey.search),
             BottomNavigationBarItem(
-                icon: Icon(Icons.bookmarks_outlined), label: 'Library'),
+                icon: Icon(Icons.bookmarks_outlined), label: DefaultKey.library),
             BottomNavigationBarItem(
-                icon: Icon(FontAwesomeIcons.spotify), label: 'Premium'),
+                icon: Icon(FontAwesomeIcons.spotify), label: DefaultKey.premium),
           ]),
       body:Stack(
         children: [
-          ThisViewRende(0,HomeView()),
-          ThisViewRende(1,Search()),
-          ThisViewRende(2,Library()),
-          ThisViewRende(3,Premium()),
+          thisViewRende(0,const HomeView()),
+          thisViewRende(1,const Search()),
+          thisViewRende(2,const Library()),
+          thisViewRende(3,const Premium()),
         ],
       ),
     );
   }
 
-  Widget ThisViewRende(int index,Widget view){
+  Widget thisViewRende(int index,Widget view){
 
     return IgnorePointer(
       ignoring: _select!=index,

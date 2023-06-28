@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:spotfiy/classes/default_key.dart';
+import 'package:spotfiy/classes/image_name.dart';
+import 'package:spotfiy/classes/palet.dart';
+import 'package:spotfiy/classes/title_key.dart';
 
 import '../widgets/album.dart';
 import '../widgets/history_album.dart';
-import '../widgets/music.dart';
+import '../widgets/most_music_list.dart';
+
+import '../widgets/music_day_list.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -26,32 +32,31 @@ class _HomeViewState extends State<HomeView> {
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [Colors.white, Colors.black.withOpacity(0)])),
+                      colors: [
+                    Palet.gradiantColor,
+                    Colors.black.withOpacity(0)
+                  ])),
             ),
             Column(
               children: [
                 SafeArea(
                   child: SingleChildScrollView(
-                    padding: const EdgeInsets.all(20),
+                    padding: Palet.pagePadding,
                     physics: const BouncingScrollPhysics(),
                     child: Column(
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Recently played',
+                            Text(Titlekey.album,
                                 style:
                                     Theme.of(context).textTheme.headlineSmall),
                             const Row(
                               children: [
                                 Icon(Icons.notification_add_rounded),
-                                SizedBox(
-                                  width: 15,
-                                ),
+                                Palet.defaultWeight,
                                 Icon(Icons.history),
-                                SizedBox(
-                                  width: 15,
-                                ),
+                                Palet.defaultWeight,
                                 Icon(Icons.settings)
                               ],
                             )
@@ -63,148 +68,118 @@ class _HomeViewState extends State<HomeView> {
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  padding: Palet.heightPadding,
                   child: Row(
                     children: [
                       Album(
-                        image: const AssetImage('images/1.png'),
-                        lable: 'Pop Mode',
+                        image: const AssetImage(ImageName.image1),
+                        lable: DefaultKey.title1,
                       ),
                       Album(
-                        image: const AssetImage('images/2.png'),
-                        lable: 'Motivation Mix',
+                        image: const AssetImage(ImageName.image2),
+                        lable: DefaultKey.title2,
                       ),
                       Album(
-                        image: const AssetImage('images/3.png'),
-                        lable: 'Top 100',
+                        image: const AssetImage(ImageName.image3),
+                        lable: DefaultKey.title3,
                       ),
                       Album(
-                        image: const AssetImage('images/like.png'),
-                        lable: 'Liked',
+                        image: const AssetImage(ImageName.like),
+                        lable: DefaultKey.title4,
                       ),
                       Album(
-                        image: const AssetImage('images/4.png'),
-                        lable: 'Power play',
+                        image: const AssetImage(ImageName.image4),
+                        lable: DefaultKey.title5,
                       ),
                       Album(
-                        image: const AssetImage('images/5.png'),
-                        lable: 'Top Podcast',
+                        image: const AssetImage(ImageName.image5),
+                        lable: DefaultKey.title6,
                       ),
                       Album(
-                        image: const AssetImage('images/6.png'),
-                        lable: 'Learn Song',
+                        image: const AssetImage(ImageName.image6),
+                        lable: DefaultKey.title7,
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                  padding: Palet.symetric,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Text(
-                        'Good night',
+                        Titlekey.day,
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
-                      const SizedBox(
-                        height: 15,
+                      Palet.defaultHeight
+                    ],
+                  ),
+                ),
+                const Padding(
+                  padding: Palet.listPadding,
+                  child: Row(
+                    children: [
+                      HistoryAlbum(
+                        image: AssetImage(ImageName.image6),
+                        text: DefaultKey.title8,
+                      ),
+                      HistoryAlbum(
+                        image: AssetImage(ImageName.image7),
+                        text: DefaultKey.title9,
                       ),
                     ],
                   ),
                 ),
                 const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                  padding: Palet.listPadding,
                   child: Row(
                     children: [
                       HistoryAlbum(
-                        image: AssetImage('images/6.png'),
-                        text: 'Pop Music',
+                        image: AssetImage(ImageName.image8),
+                        text: DefaultKey.title10,
                       ),
                       HistoryAlbum(
-                        image: AssetImage('images/7.png'),
-                        text: 'Slow Türkçe',
+                        image: AssetImage(ImageName.image9),
+                        text: DefaultKey.title11,
                       ),
                     ],
                   ),
                 ),
                 const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                  padding: Palet.listPadding,
                   child: Row(
                     children: [
                       HistoryAlbum(
-                        image: AssetImage('images/8.png'),
-                        text: 'Dailiy Mix 1',
+                        image: AssetImage(ImageName.image10),
+                        text: DefaultKey.title12,
                       ),
                       HistoryAlbum(
-                        image: AssetImage('images/9.png'),
-                        text: 'Dailiy Mix 2',
-                      ),
-                    ],
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-                  child: Row(
-                    children: [
-                      HistoryAlbum(
-                        image: AssetImage('images/10.png'),
-                        text: 'Lost. Mix',
-                      ),
-                      HistoryAlbum(
-                        image: AssetImage('images/11.png'),
-                        text: 'Rock Music',
+                        image: AssetImage(ImageName.image11),
+                        text: DefaultKey.title13,
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  padding: Palet.symetric,
                   child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Your Recent Listening',
+                        Titlekey.list,
                         style: Theme.of(context).textTheme.titleLarge,
                       )),
                 ),
-                const SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          MusicCard(
-                            image: AssetImage('images/4.png'),
-                          ),
-                          MusicCard(
-                            image: AssetImage('images/5.png'),
-                          ),
-                          MusicCard(
-                            image: AssetImage('images/7.png'),
-                          ),
-                          MusicCard(
-                            image: AssetImage('images/1.png'),
-                          ),
-                          MusicCard(
-                            image: AssetImage('images/10.png'),
-                          ),
-                          MusicCard(
-                            image: AssetImage('images/9.png'),
-                          ),
-                          MusicCard(
-                            image: AssetImage('images/8.png'),
-                          ),
-                          MusicCard(
-                            image: AssetImage('images/2.png'),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                const MostList(),
+                Padding(
+                  padding: Palet.symetric,
+                  child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        Titlekey.music,
+                        style: Theme.of(context).textTheme.titleLarge,
+                      )),
                 ),
+                const MusicDayList(),
               ],
             )
           ],
