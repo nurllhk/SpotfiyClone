@@ -3,12 +3,11 @@ import 'package:spotfiy/classes/default_key.dart';
 import 'package:spotfiy/classes/image_name.dart';
 import 'package:spotfiy/classes/palet.dart';
 import 'package:spotfiy/classes/title_key.dart';
-
 import '../widgets/album.dart';
 import '../widgets/history_album.dart';
 import '../widgets/most_music_list.dart';
-
 import '../widgets/music_day_list.dart';
+
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

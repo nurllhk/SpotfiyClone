@@ -16,4 +16,5 @@ class DefaultKey {
   static const String title11= "Dailiy Mix 2";
   static const String title12 = "Lost. Mix";
   static const String title13 = "Rock Music";
+  static const String spotfiy= "Spotfiy";
 }

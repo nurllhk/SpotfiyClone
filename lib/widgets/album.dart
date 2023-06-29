@@ -17,7 +17,7 @@ class Album extends StatelessWidget {
     return InkWell(
      onTap: (){
        Navigator.of(context).push(MaterialPageRoute(builder: (context){
-         return ViewAlbum(image: image);
+         return ViewAlbum(image: image, text: lable,);
        }));
      },
       child: Column(
