@@ -15,5 +15,6 @@ class ImageName{
   static const String image11="images/11.png";
   static const String like="images/like.png";
   static const String logo = "images/spotfiylogo.webp";
+  static const String play ="images/play.png";
 
 }

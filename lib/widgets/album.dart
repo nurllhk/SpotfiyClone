@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotfiy/classes/palet.dart';
 import 'package:spotfiy/widgets/view_album.dart';
 
 
@@ -6,7 +7,7 @@ class Album extends StatelessWidget {
   final ImageProvider image;
   final String lable;
 
-  Album({
+  const Album({
     required this.image,
     required this.lable,
     super.key,
@@ -33,8 +34,8 @@ class Album extends StatelessWidget {
                   const EdgeInsets.symmetric(vertical: 2, horizontal: 5),
                   child: Image(
                     image: image,
-                    width: 120,
-                    height: 120,
+                    width: 140,
+                    height: 140,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -42,7 +43,7 @@ class Album extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
+            padding: Palet.heightPadding,
             child: Text(lable,style: Theme.of(context).textTheme.labelLarge,),
           ),
         ],

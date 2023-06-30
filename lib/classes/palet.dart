@@ -9,6 +9,7 @@ class Palet {
   static const EdgeInsets listPadding =
       EdgeInsets.symmetric(horizontal: 10, vertical: 5);
   static const EdgeInsets heightPadding = EdgeInsets.symmetric(vertical: 10);
+  static const EdgeInsets MediumHeightPadding = EdgeInsets.symmetric(vertical: 5);
   static const SizedBox defaultWeight = SizedBox(
     width: 15,
   );
@@ -20,4 +21,9 @@ class Palet {
       color: Colors.black.withOpacity(1),
       blurRadius: 30,
       spreadRadius: 15);
+  static final LinearGradient gradient=LinearGradient(colors: [
+    Colors.black.withOpacity(0),
+    Colors.black.withOpacity(0),
+    Colors.black.withOpacity(1),
+  ], begin: Alignment.center, end: Alignment.bottomCenter);
 }

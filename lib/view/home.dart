@@ -65,37 +65,37 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                 ),
-                SingleChildScrollView(
+                const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   padding: Palet.heightPadding,
                   child: Row(
                     children: [
                       Album(
-                        image: const AssetImage(ImageName.image1),
+                        image:  AssetImage(ImageName.image1),
                         lable: DefaultKey.title1,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image2),
+                        image:  AssetImage(ImageName.image2),
                         lable: DefaultKey.title2,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image3),
+                        image:  AssetImage(ImageName.image3),
                         lable: DefaultKey.title3,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.like),
+                        image:  AssetImage(ImageName.like),
                         lable: DefaultKey.title4,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image4),
+                        image:  AssetImage(ImageName.image4),
                         lable: DefaultKey.title5,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image5),
+                        image:  AssetImage(ImageName.image5),
                         lable: DefaultKey.title6,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image6),
+                        image:  AssetImage(ImageName.image6),
                         lable: DefaultKey.title7,
                       ),
                     ],
