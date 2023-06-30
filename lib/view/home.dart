@@ -3,12 +3,11 @@ import 'package:spotfiy/classes/default_key.dart';
 import 'package:spotfiy/classes/image_name.dart';
 import 'package:spotfiy/classes/palet.dart';
 import 'package:spotfiy/classes/title_key.dart';
-
 import '../widgets/album.dart';
 import '../widgets/history_album.dart';
 import '../widgets/most_music_list.dart';
-
 import '../widgets/music_day_list.dart';
+
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -66,37 +65,37 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                 ),
-                SingleChildScrollView(
+                const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   padding: Palet.heightPadding,
                   child: Row(
                     children: [
                       Album(
-                        image: const AssetImage(ImageName.image1),
+                        image:  AssetImage(ImageName.image1),
                         lable: DefaultKey.title1,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image2),
+                        image:  AssetImage(ImageName.image2),
                         lable: DefaultKey.title2,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image3),
+                        image:  AssetImage(ImageName.image3),
                         lable: DefaultKey.title3,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.like),
+                        image:  AssetImage(ImageName.like),
                         lable: DefaultKey.title4,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image4),
+                        image:  AssetImage(ImageName.image4),
                         lable: DefaultKey.title5,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image5),
+                        image:  AssetImage(ImageName.image5),
                         lable: DefaultKey.title6,
                       ),
                       Album(
-                        image: const AssetImage(ImageName.image6),
+                        image:  AssetImage(ImageName.image6),
                         lable: DefaultKey.title7,
                       ),
                     ],
